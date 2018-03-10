@@ -34,10 +34,34 @@ server.use(expressValidator());
 server.get('/', function(req, res) {
   db.users.find(function (err, docs) {
      res.render('index', {
-       title: 'Customers',
+       title: 'HomePage',
        users: docs
      });
   })
+});
+
+server.get('/index', function (req, res) {
+ res.render('index', {
+   title: 'Homepage'
+ });
+});
+
+server.get('/solo', function (req, res) {
+ res.render('solo', {
+   title: 'Git Solo'
+ });
+});
+
+server.get('/group', function (req, res) {
+ res.render('group', {
+   title: 'Git Group'
+ });
+});
+
+server.get('/forking', function (req, res) {
+ res.render('forking', {
+   title: 'Git Forking Collaboration'
+ });
 });
 
 server.post('/url', function(req, res){

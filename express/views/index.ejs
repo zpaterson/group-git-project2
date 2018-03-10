@@ -1,156 +1,25 @@
 <% include partials/header %>
-  <div class="container-fluid">
-    <div class="row">
-     <div class="col-lg-12 col-md-12 col-xs-12">
+        <h1 class="title page-header">Lets Git Going!</h1>
+        <div class="center-block">
+        <p> <h5 class= 'p'>This tutorial is for people who have a basic understanding of what Git is and want a better understanding of how to use Git in their work-flow. In order to continue with this tutorial you should:</p>
+        <ol>
+        <li>Download Git</li>
+        <li>Have an account on GitHub</li>
+        <li>Have downloaded a text editor (Atom/Sublime)</li></h3>
+        </ol><h5>
+        <p><h1 class="title page-header"> Now, let’s git started!</p></h1>
+        </div class'title'>
+        <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="253" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/JIX9t2j0ZTN9S"></a></p></div>
+        
+        <div class='links'> Made with ♥ <a href="https://techtonica.org/">@Techtonica</a> by: </div>
+        <div class='links'>
+        <img src="./images/IMG_5650.png" width="200" height="200"/>
+        <img src="./images/IMG_8197.png" width="200" height="200"/>
+        <img src="./images/IMG_3098.png" width="200" height="200"/></br>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
-       <h1 class="page-header">Lets Git Going!</h1>
-       <div class="center-block">
-    <p>This tutorial is for people who have a basic understanding of what Git is and want a better understanding of how to use Git in their work-flow. In order to continue with this tutorial you should:</p>
-    <ol>
-      <li>Download Git</li>
-      <li>Have an account on GitHub</li>
-      <li>Have downloaded a text editor (Atom/Sublime)</li>
-    </ol>
-    <p>Now, let’s git started!</p>
-  </div>
-    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" />
-    <h2>Git Solo- Personal projects and posting to GitHub</h2>
-    <ol>
-      <li>Open your Terminal</li>
-      <li>Go to your Desktop</li>
-      <kbd>cd desktop</kbd>
-      <li>Create an empty directory (we'll use the name GitFun)</li>
-      <kbd>mkdir GitFun</kbd>
-      <li>Add a file (.html, .css, .js, .ejs) (you can open text editor to make changes if you want)</li>
-      <kbd>touch index.html</kbd>
-      <li>Initialize an empty Git repository</li>
-      <kbd>git init</kbd>
-      <li>Look at the status of your files</li>
-      <kbd>git status</kbd>
-      <li>Add your changes to the staging area</li>
-      <kbd>git add index.html</kbd> (<kbd>git add .</kbd> will add all changes)
-      <li>Commit your staged changes</li>
-      <kbd>git commit -m”do NOT forget to include comment”</kbd>
-      <p style="color: red">If you forget to include a message and get stuck, type <kbd>:q!</kbd></p>
-      <li>Log onto your Github and make a new Github repository</li>
-      <li>Copy remote/push from GitHub page + paste on your terminal.</li>
-      <li>Refresh your GitHub page- should have ALL files loaded!</li>
-    </ol>
-    <p>Keep going...If you would like to continue to make changes to your file(s), follow these steps to learn how to commit those changes back on Github:</p>
-    <ol start="12">
-      <li>Make changes on index.html (add code or comments) on your text editor and <kbd>cmd + S</kbd> to save files</li>
-      <li>Add changes to staging area</li>
-      <kbd>git add index.html</kbd>
-      <li>Commit your changes</li>
-      <kbd>git commit -m”do NOT forget to include comment”</kbd>
-      <li>Push your committed changes to Github</li>
-      <kbd>git push -u origin master</kbd>
-      <li>Refresh page + voila!</li>
-    </ol>
+        <a href="https://twitter.com/mmed1na?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @mmed1na</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    <h2>Git Group- working with an immediate team.</h2>
-    <ol>
-      <li>Go to the Github master repository you are cloning, and click clone then copy the URL</li>
-      <li>Open your terminal and go on your Desktop (if you wish to place the clone into another folder, go ahead and cd into that folder as well)<li>
-      <kbd>cd desktop</kbd>
-      <li>Clone the Github repository onto your computer</li>
-      <kbd>git clone <i>URL</i></kbd>
-      <li>Go into the folder that you just cloned</li>
-      <kbd>cd git-group-project</kbd>
-      <li>Create a branch to make edits</li>
-      <kbd>git branch myBranch</kbd>
-      <li>Switch to your newly created branch<li>
-      <kbd>git checkout myBranch</kbd>
-      <li>Open your text editor and make your changes; remember to save</li>
-      <li>Add changes to staging area</li>
-      <kbd>git add index.html</kbd>
-      <li>Commit your changes</li>
-      <kbd>git commit -m”do NOT forget to include comment”</kbd>
-      <li>Checkout to your master branch<li>
-      <kbd>git checkout master</kbd>
-      <li>Merge your branch with your master</li>
-      <kbd>git merge myBranch</kbd>
-      <li>Push your changes to your branch<li>
-      <kbd>git push origin myBranch</kbd>
-      <p style="color: red">** Here we are pushing the changes to the branch and not the origin master. We want to be able to create a pull request to the owner for the changes to be reviewed before being implemented.</p>
-      <li>Once push is successful, delete your branch</li>
-      <kbd>git branch -D myBranch</kbd>
-    </ol>
-    <br>
-    <h4>Pulling the master repo</h4>
-    <p>(assuming a couple of days have passed and the team has created/merged pull requests)</p>
-    <ol>
-      <li>Make sure you cd into the project folder before following the steps below</li>
-      <li>Fetch the specified remote’s copy and immediately merge it into the local copy.</li>
-      <kbd>git pull origin master</kbd>
-      <li>Create a branch to make edits</li>
-      <kbd>git branch jen-add-form</kbd>
-      <li>Repeat Steps #7-14 from above</li>
-    </ol>
-    <br>
-    <h4>Dealing with merge conflicts:</h4>
-    <ol>
+        <a href="https://twitter.com/patersonzaire?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @patersonzaire</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-      <li>Git fetch (make sure to ALWAYS fetch before you edit!)</li>
-      <li>Git merge</li>
-      <li>Git branch branch_name (creating your own branch to make edits)</li>
-      <li>Git checkout branch_name</li>
-      <li>Open your text editor and start making edits</li>
-      <li>Git add file_name</li>
-      <li>Git status</li>
-      <li>Git commit -m”do NOT forget to comment”</li>
-      <li>Git push branch_name</li>
-      <p>Warning! This section can get tricky. If someone pushes at the same time as you it will return as a merge conflict. No need to worry, you can now follow these steps:</p>
-      <li>Git fetch (Note: do NOT pull, pull loses content)</li>
-      <li>Git merge (this will show changes on your editor, delete any unwanted marks)</li>
-    </ol>
-
-    <h2>Git Fork</h2>
-    <ol>
-      <li>Go to the Github repository that you’re interested in forking</li>
-      <li>Click fork → this will essentially create a copy of the repository onto your profile where you can make changes and edits without it affects the original repository</li>
-      <li>From the newly copied repository in your profile, click click and copy URL </li>
-      <li>On your terminal, cd into your desktop (cd into the folder you want to place your clone in) git clone URL then ls to check what is in there</li>
-      <li>Git branch branch_name (creating your own branch to make edits)</li>
-      <li>Git checkout branch_name</li>
-      <li>Open your text editor and start making edits</li>
-      <li>Git add file_name</li>
-      <li>Git status</li>
-      <li>Git commit -m”do NOT forget to comment”</li>
-      <li>Git merge master (or git checkout master then git merge <branch>?)</li>
-      <li>Git push -u origin master </li>
-      <p>If you want to incorporate your changes into the original repository:</p>
-      <li>Create a pull request </li>
-      <li>The original owner will see the pull request and if they like it, they will merge the request.</li>
-    </ol>
-
-    <% if(errors){ %>
-      <ul>
-      <% errors.forEach(function(error) { %>
-        <li><%= error.msg %></li>
-      <% }) %>
-      </ul>
-    <% } %>
-    <form class="form-inline" method="post" action="/url">
-              <div><div class="form-group">
-                <label for="exampleInputName2">Name</label>
-                <input type="text" name="name" placeholder=" ">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail2">Email</label>
-                <input type="text" name="email" placeholder=" ">
-              </div>
-              <button type="submit" class="btn btn-default id='button'">Send</button>
-    </div></form>
-  </div>
-  </div>
-  </div>
+        <a href="https://twitter.com/VivianSan21?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @VivianSan21</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <% include partials/footer %>
